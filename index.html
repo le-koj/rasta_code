@@ -1,6 +1,14 @@
 ---
-title: home
+title: Rasta Code
 ---
 
-    <h1>{{ "Hello World!" | downcase }}</h1>
-    <h4> layouts works </h4>
+<h1>Koj's Simple Blogs</h1>
+
+<ul class="card-container">
+  {% for post in site.posts %}
+    <li class="card">
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      {{ post.excerpt }}
+    </li>
+  {% endfor %}
+</ul>

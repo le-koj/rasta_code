@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Gui App Work Docker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+    <nav class="topnav" id="myTopnav">
+  
+    <a href="/" >Rasta.Code</a>
+  
+    <a href="" ></a>
+  
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</nav>
+    <main>
+        <h1>Make Gui App Work Docker</h1>
+<p>
+    06 Sep 2021
+    
+    
+</p>
+
+<h4> 3 SIMPLE STEPS TO MAKE A GUI APP WORK IN A DOCKER CONTAINER </h4>
+
+<p>Make sure x11-server is installed an up to date by running:</p>
+
+<p class="scripts"> sudo apt-get install x11-xserver-utils </p>
+
+<p>Grant full access to the x11-server by running:</p>
+
+<p class="scripts"> xhost + </p>
+
+<p>Run the docker container with the following flags &lt;/p&gt;:</p>
+
+<p class="scripts"> -e DISPLAY=unix$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix </p>
+
+    </main>
+<script src="/assets/js/styles.js"></script>
+</body>
+</html>

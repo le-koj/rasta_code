@@ -2,12 +2,7 @@ collections:
   authors:
     output: true
 
-defaults:
-  - scope:
-      path: ""
-      type: "authors"
-    values:
-      layout: "author"
+defaults:  
   - scope:
       path: ""
       type: "posts"

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Font Color</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+    <nav class="topnav" id="myTopnav">
+  
+    <a href="/" >Rasta.Code</a>
+  
+    <a href="" ></a>
+  
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</nav>
+    <main>
+        <h1>Css Font Color</h1>
+<p>
+    06 Sep 2021
+    
+    
+</p>
+
+<h4 id="capitalize">6 different ways to set font color.</h4>
+
+<ol>
+  <li>Named Color</li>
+  <li>Hexadecimal Color</li>
+  <li>RGB Color</li>
+  <li>RGBA Color</li>
+  <li>HSL Color</li>
+  <li>HSLA Color</li>
+</ol>
+
+<h4 id="named-color">Named Color</h4>
+
+<ul>
+  <li>You apply the color property by naming the color.</li>
+  <li>There are around 147 named colors recognized by browsers.</li>
+  <li>
+    <p>Basic Syntax:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  element {  
+      color:  colorName;  
+      }
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h4 id="hexadecimal-color-hex-colors">Hexadecimal Color (Hex Colors)</h4>
+
+<ul>
+  <li>A total of 7 characters represent hex colors.</li>
+  <li>Starts with a pound sign (#).</li>
+  <li>Followed by any combination of numbers between [0 to 9], and any letters [A to F] or [a to f].</li>
+  <li>The first two values represent RED.</li>
+  <li>The second two represent GREEN.</li>
+  <li>
+    <p>The last two represent BLUE.</p>
+  </li>
+  <li>
+    <p>Basic Syntax:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  element {  
+      color: #dc143c;  
+      }
+
+  element {  
+      color: #c0c0c0;  
+      }
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h4 id="rgb-color">RGB Color</h4>
+
+<ul>
+  <li>RGB stands for Red, Green, Blue.</li>
+  <li>You specify the color in terms of how much red, green, and blue you want.</li>
+  <li>
+    <p>All 3 values are expressed with numbers between 0 and 255.</p>
+  </li>
+  <li>
+    <p>Basic Syntax:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  element {  
+      color: rgb(amountOfRed, amountOfGreen, amountOfBlue);  
+      }
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h4 id="rgba-color">RGBA color</h4>
+
+<ul>
+  <li>RGBA stands for Red, Green, Blue, Alpha.</li>
+  <li>You specify the color in terms of how much red, green, and blue you want.</li>
+  <li>The Alpha specifies the opacity of the color.</li>
+  <li>It takes a value from 0.0 to 1.0:
+    <ul>
+      <li>0.0 means 0% opacity.</li>
+      <li>1.0 means 100% opacity.</li>
+    </ul>
+  </li>
+  <li>
+    <p>All 3 values are expressed with numbers between 0 and 255.</p>
+  </li>
+  <li>
+    <p>Basic Syntax:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  element {  
+      color: rgb(amountOfRed, amountOfGreen, amountOfBlue, alpha);  
+      }
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h4 id="hsl-color">HSL color</h4>
+
+<ul>
+  <li>HSL stands for Hue, Saturation, Lightness.</li>
+  <li>Hue represents the color wheel in 360 degrees.
+    <ul>
+      <li>0 degrees is red</li>
+      <li>120 degrees is green</li>
+      <li>240 degrees is blue</li>
+    </ul>
+  </li>
+  <li>Saturation is the percentage amount of gray in the color.
+    <ul>
+      <li>0% is the shade of gray</li>
+      <li>100% is the color itself</li>
+    </ul>
+  </li>
+  <li>Lightness is the percentage amount of darkness and lightness
+    <ul>
+      <li>0% is black</li>
+      <li>100% is white</li>
+    </ul>
+  </li>
+  <li>
+    <p>Basic Syntax</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  element {  
+      color: hsl(colorDegree, saturationDegree, lIghtnessDegree);  
+      }
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h4 id="hsla-color">HSLA color</h4>
+
+<ul>
+  <li>HSLA stands for Hue, Saturation, Lightness, Alpha.</li>
+  <li>Hue represents the color wheel in 360 degrees.
+    <ul>
+      <li>0 degrees is red.</li>
+      <li>120 degrees is green.</li>
+      <li>240 degrees is blue.</li>
+    </ul>
+  </li>
+  <li>Saturation is the percentage amount of gray in the color.
+    <ul>
+      <li>0% is the shade of gray.</li>
+      <li>100% is the color itself.</li>
+    </ul>
+  </li>
+  <li>Lightness is the percentage amount of darkness and lightness.
+    <ul>
+      <li>0% is black.</li>
+      <li>100% is white.</li>
+    </ul>
+  </li>
+  <li>The Alpha specifies the opacity of the color.</li>
+  <li>It takes a value from 0.0 to 1.0.
+    <ul>
+      <li>0.0 means 0% opacity.</li>
+      <li>1.0 means 100% opacity.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Basic Syntax:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  element {  
+      color: hsl(colorDegree, saturationDegree, lIghtnessDegree, alpha);  
+      }
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>Credits:</p>
+
+<p><a href="https://www-freecodecamp-org.cdn.ampproject.org/v/s/www.freecodecamp.org/news/css-font-color-how-to-style-text-in-html/amp/?amp_js_v=a6&amp;amp_gsa=1&amp;usqp=mq331AQIKAGwASCAAgM%3D#aoh=16305628764404&amp;csi=0&amp;referrer=https%3A%2F%2Fwww.google.com&amp;amp_tf=From%20%251%24s&amp;ampshare=https%3A%2F%2Fwww.freecodecamp.org%2Fnews%2Fcss-font-color-how-to-style-text-in-html%2F">CSS Font Color – How to Style Text in HTML</a></p>
+
+
+    </main>
+<script src="/assets/js/styles.js"></script>
+</body>
+</html>
