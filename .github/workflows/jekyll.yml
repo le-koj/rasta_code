@@ -24,6 +24,6 @@ jobs:
       uses: helaili/jekyll-action@v2
       with:
           token: ${{ secrets.RASTA_SECRET_TOKEN }}
-          jekyll_src: '/srv/jekyll'
+          jekyll_src: '/_site'
           target_branch: 'gh-pages'
 
