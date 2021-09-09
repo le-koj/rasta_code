@@ -7,14 +7,27 @@ on:
     branches: [ main ]
 
 jobs:
-  github-pages:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout
+      uses: actions/checkout@v2
+    
     - name: Build the site in the jekyll/builder container
       run: |
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+        
+    - name: Install rsync 
+      run: |
+          apt-get update && apt-get install -y rsync
+
+    - name: Deploy 
+      uses: JamesIves/github-pages-deploy-action@4.1.5
+      with:
+          token: ${{ secrets.RASTA_SECRET_TOKEN }}
+          branch: gh-pages # The branch the action should deploy to.
+          folder: build # The folder the action should deploy
 
