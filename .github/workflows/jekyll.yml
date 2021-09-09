@@ -21,9 +21,9 @@ jobs:
         jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
 
     - name: Deploy 
-      uses: JamesIves/github-pages-deploy-action@4.1.5
+      uses: helaili/jekyll-action@v2
       with:
           token: ${{ secrets.RASTA_SECRET_TOKEN }}
-          branch: gh-pages # The branch the action should deploy to.
-          folder: build # The folder the action should deploy
+          jekyll_src: '/srv/jekyll/_site'
+          target_branch: 'gh-pages'
 
