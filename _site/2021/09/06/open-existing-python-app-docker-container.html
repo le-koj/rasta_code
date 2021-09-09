@@ -7,6 +7,25 @@
     <title>Open Existing Python App Docker Container</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
+    <link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Open Existing Python App Docker Container</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Open Existing Python App Docker Container" />
+<meta name="author" content="Le KOj" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="4 SIMPLE COMMAND TO OPEN AN EXISTING PYTHON APP IN A DOCKER CONTAINER" />
+<meta property="og:description" content="4 SIMPLE COMMAND TO OPEN AN EXISTING PYTHON APP IN A DOCKER CONTAINER" />
+<link rel="canonical" href="http://0.0.0.0:4000/2021/09/06/open-existing-python-app-docker-container.html" />
+<meta property="og:url" content="http://0.0.0.0:4000/2021/09/06/open-existing-python-app-docker-container.html" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-09-06T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Open Existing Python App Docker Container" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Le KOj"},"description":"4 SIMPLE COMMAND TO OPEN AN EXISTING PYTHON APP IN A DOCKER CONTAINER","headline":"Open Existing Python App Docker Container","dateModified":"2021-09-06T00:00:00-05:00","datePublished":"2021-09-06T00:00:00-05:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/2021/09/06/open-existing-python-app-docker-container.html"},"url":"http://0.0.0.0:4000/2021/09/06/open-existing-python-app-docker-container.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
 </head>
 <body>
     <nav class="topnav" id="myTopnav">
@@ -29,26 +48,25 @@
 
 <h4>4 SIMPLE COMMAND TO OPEN AN EXISTING PYTHON APP IN A DOCKER CONTAINER</h4>
 
-<p>In terminal, cd into the root folder of the python application.
+<p>In terminal, <code class="language-plaintext highlighter-rouge">cd</code> into the root folder of the python application.
 Run the following command to start a docker container for the app.</p>
 
-<p class="scripts">docker container run -it –name=[CONTAINER_NAME]  -v $(pwd):/home [IMAGE] bash</p>
+<p><code class="language-plaintext highlighter-rouge">docker container run -it –name=[CONTAINER_NAME] -v $(pwd):/home [IMAGE] bash</code></p>
 
-<p>In the bash shell of the project container cd into the directory “home”.</p>
+<p>In the bash shell of the project container <code class="language-plaintext highlighter-rouge">cd</code> into the directory <code class="language-plaintext highlighter-rouge">home</code>.</p>
 
-<p class="scripts">cd  home</p>
+<p><code class="language-plaintext highlighter-rouge">cd  home</code></p>
 
 <p>Run the following command to see your app files/folders in the home directory.</p>
 
-<p class="scripts">ls</p>
-
-<section class="note">
+<p><code class="language-plaintext highlighter-rouge">ls</code></p>
 
 <p>NOTE: </p>
-	<p>the flag [-v $(pwd):/home] mounts the container’s ‘home’ directory to the app’s root folder</p>
-</section>
+
+<p>the flag [<code class="language-plaintext highlighter-rouge">-v $(pwd):/home</code>] mounts the container’s <code class="language-plaintext highlighter-rouge">home</code> directory to the app’s root folder</p>
 
     </main>
 <script src="/assets/js/styles.js"></script>
+
 </body>
 </html>

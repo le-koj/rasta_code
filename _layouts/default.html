@@ -7,6 +7,8 @@
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
+    {% feed_meta %}
+    {% seo %}
 </head>
 <body>
     {% include navigation.html %}
@@ -14,5 +16,8 @@
         {{ content }}
     </main>
 <script src="/assets/js/styles.js"></script>
+{% if jekyll.environment == "production" %}
+  <script src="my-analytics-script.js"></script>
+{% endif %}
 </body>
 </html>

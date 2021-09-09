@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2021-09-09T03:52:59-05:00</updated><id>http://0.0.0.0:4000/feed.xml</id><entry><title type="html">Css Font Color</title><link href="http://0.0.0.0:4000/2021/09/06/css-font-color.html" rel="alternate" type="text/html" title="Css Font Color" /><published>2021-09-06T00:00:00-05:00</published><updated>2021-09-06T00:00:00-05:00</updated><id>http://0.0.0.0:4000/2021/09/06/css-font-color</id><content type="html" xml:base="http://0.0.0.0:4000/2021/09/06/css-font-color.html">&lt;h4 id=&quot;capitalize&quot;&gt;6 different ways to set font color.&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Named Color&lt;/li&gt;
+  &lt;li&gt;Hexadecimal Color&lt;/li&gt;
+  &lt;li&gt;RGB Color&lt;/li&gt;
+  &lt;li&gt;RGBA Color&lt;/li&gt;
+  &lt;li&gt;HSL Color&lt;/li&gt;
+  &lt;li&gt;HSLA Color&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;named-color&quot;&gt;Named Color&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;You apply the color property by naming the color.&lt;/li&gt;
+  &lt;li&gt;There are around 147 named colors recognized by browsers.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Basic Syntax:&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  element {  
+      color:  colorName;  
+      }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;hexadecimal-color-hex-colors&quot;&gt;Hexadecimal Color (Hex Colors)&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A total of 7 characters represent hex colors.&lt;/li&gt;
+  &lt;li&gt;Starts with a pound sign (#).&lt;/li&gt;
+  &lt;li&gt;Followed by any combination of numbers between [0 to 9], and any letters [A to F] or [a to f].&lt;/li&gt;
+  &lt;li&gt;The first two values represent RED.&lt;/li&gt;
+  &lt;li&gt;The second two represent GREEN.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The last two represent BLUE.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Basic Syntax:&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  element {  
+      color: #dc143c;  
+      }
+
+  element {  
+      color: #c0c0c0;  
+      }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;rgb-color&quot;&gt;RGB Color&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;RGB stands for Red, Green, Blue.&lt;/li&gt;
+  &lt;li&gt;You specify the color in terms of how much red, green, and blue you want.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;All 3 values are expressed with numbers between 0 and 255.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Basic Syntax:&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  element {  
+      color: rgb(amountOfRed, amountOfGreen, amountOfBlue);  
+      }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;rgba-color&quot;&gt;RGBA color&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;RGBA stands for Red, Green, Blue, Alpha.&lt;/li&gt;
+  &lt;li&gt;You specify the color in terms of how much red, green, and blue you want.&lt;/li&gt;
+  &lt;li&gt;The Alpha specifies the opacity of the color.&lt;/li&gt;
+  &lt;li&gt;It takes a value from 0.0 to 1.0:
+    &lt;ul&gt;
+      &lt;li&gt;0.0 means 0% opacity.&lt;/li&gt;
+      &lt;li&gt;1.0 means 100% opacity.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;All 3 values are expressed with numbers between 0 and 255.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Basic Syntax:&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  element {  
+      color: rgb(amountOfRed, amountOfGreen, amountOfBlue, alpha);  
+      }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;hsl-color&quot;&gt;HSL color&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;HSL stands for Hue, Saturation, Lightness.&lt;/li&gt;
+  &lt;li&gt;Hue represents the color wheel in 360 degrees.
+    &lt;ul&gt;
+      &lt;li&gt;0 degrees is red&lt;/li&gt;
+      &lt;li&gt;120 degrees is green&lt;/li&gt;
+      &lt;li&gt;240 degrees is blue&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Saturation is the percentage amount of gray in the color.
+    &lt;ul&gt;
+      &lt;li&gt;0% is the shade of gray&lt;/li&gt;
+      &lt;li&gt;100% is the color itself&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Lightness is the percentage amount of darkness and lightness
+    &lt;ul&gt;
+      &lt;li&gt;0% is black&lt;/li&gt;
+      &lt;li&gt;100% is white&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Basic Syntax&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  element {  
+      color: hsl(colorDegree, saturationDegree, lIghtnessDegree);  
+      }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;hsla-color&quot;&gt;HSLA color&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;HSLA stands for Hue, Saturation, Lightness, Alpha.&lt;/li&gt;
+  &lt;li&gt;Hue represents the color wheel in 360 degrees.
+    &lt;ul&gt;
+      &lt;li&gt;0 degrees is red.&lt;/li&gt;
+      &lt;li&gt;120 degrees is green.&lt;/li&gt;
+      &lt;li&gt;240 degrees is blue.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Saturation is the percentage amount of gray in the color.
+    &lt;ul&gt;
+      &lt;li&gt;0% is the shade of gray.&lt;/li&gt;
+      &lt;li&gt;100% is the color itself.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Lightness is the percentage amount of darkness and lightness.
+    &lt;ul&gt;
+      &lt;li&gt;0% is black.&lt;/li&gt;
+      &lt;li&gt;100% is white.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;The Alpha specifies the opacity of the color.&lt;/li&gt;
+  &lt;li&gt;It takes a value from 0.0 to 1.0.
+    &lt;ul&gt;
+      &lt;li&gt;0.0 means 0% opacity.&lt;/li&gt;
+      &lt;li&gt;1.0 means 100% opacity.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Basic Syntax:&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  element {  
+      color: hsl(colorDegree, saturationDegree, lIghtnessDegree, alpha);  
+      }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Credits:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www-freecodecamp-org.cdn.ampproject.org/v/s/www.freecodecamp.org/news/css-font-color-how-to-style-text-in-html/amp/?amp_js_v=a6&amp;amp;amp_gsa=1&amp;amp;usqp=mq331AQIKAGwASCAAgM%3D#aoh=16305628764404&amp;amp;csi=0&amp;amp;referrer=https%3A%2F%2Fwww.google.com&amp;amp;amp_tf=From%20%251%24s&amp;amp;ampshare=https%3A%2F%2Fwww.freecodecamp.org%2Fnews%2Fcss-font-color-how-to-style-text-in-html%2F&quot;&gt;CSS Font Color – How to Style Text in HTML&lt;/a&gt;&lt;/p&gt;</content><author><name>Le Koj</name></author><summary type="html">6 different ways to set font color.</summary></entry><entry><title type="html">Make Gui App Work Docker</title><link href="http://0.0.0.0:4000/2021/09/06/make-gui-app-work-docker.html" rel="alternate" type="text/html" title="Make Gui App Work Docker" /><published>2021-09-06T00:00:00-05:00</published><updated>2021-09-06T00:00:00-05:00</updated><id>http://0.0.0.0:4000/2021/09/06/make-gui-app-work-docker</id><content type="html" xml:base="http://0.0.0.0:4000/2021/09/06/make-gui-app-work-docker.html">&lt;h4&gt; 3 SIMPLE STEPS TO MAKE A GUI APP WORK IN A DOCKER CONTAINER &lt;/h4&gt;
+
+&lt;p&gt;Make sure &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x11-server&lt;/code&gt; is installed an up to date by running:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo apt-get install x11-xserver-utils&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Grant full access to the x11-server by running:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;xhost +&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Run the docker container with the following flags &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/p&amp;gt;&lt;/code&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-e DISPLAY=unix$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix&lt;/code&gt;&lt;/p&gt;</content><author><name>Le KOj</name></author><summary type="html">3 SIMPLE STEPS TO MAKE A GUI APP WORK IN A DOCKER CONTAINER</summary></entry><entry><title type="html">Open Existing Python App Docker Container</title><link href="http://0.0.0.0:4000/2021/09/06/open-existing-python-app-docker-container.html" rel="alternate" type="text/html" title="Open Existing Python App Docker Container" /><published>2021-09-06T00:00:00-05:00</published><updated>2021-09-06T00:00:00-05:00</updated><id>http://0.0.0.0:4000/2021/09/06/open-existing-python-app-docker-container</id><content type="html" xml:base="http://0.0.0.0:4000/2021/09/06/open-existing-python-app-docker-container.html">&lt;h4&gt;4 SIMPLE COMMAND TO OPEN AN EXISTING PYTHON APP IN A DOCKER CONTAINER&lt;/h4&gt;
+
+&lt;p&gt;In terminal, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cd&lt;/code&gt; into the root folder of the python application.
+Run the following command to start a docker container for the app.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker container run -it –name=[CONTAINER_NAME] -v $(pwd):/home [IMAGE] bash&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;In the bash shell of the project container &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cd&lt;/code&gt; into the directory &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;home&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cd  home&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Run the following command to see your app files/folders in the home directory.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ls&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;NOTE: &lt;/p&gt;
+
+&lt;p&gt;the flag [&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-v $(pwd):/home&lt;/code&gt;] mounts the container’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;home&lt;/code&gt; directory to the app’s root folder&lt;/p&gt;</content><author><name>Le KOj</name></author><summary type="html">4 SIMPLE COMMAND TO OPEN AN EXISTING PYTHON APP IN A DOCKER CONTAINER</summary></entry></feed>

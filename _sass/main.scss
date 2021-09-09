@@ -21,6 +21,10 @@ li ul {
   margin-left:20px;
 }
 
+p {
+  line-height: 1.5em;
+}
+
 /* Add a black background color to the top navigation */
 .topnav {
   background-color: #333;
@@ -107,21 +111,26 @@ h4 {
   color: #CCac00;
 }
 
-p.scripts, .highlighter-rouge {
+
+.highlighter-rouge {
+  /**
   width: auto;
   max-width: 500px;
   margin-left: 1px;
+  /**/
   padding: 5px 10px 5px 10px;
   background: #c0c0c0;
   color: #262626;
   font-size: 1em;
   font-family: monospace, Courier, 'Courier New';
   border-radius: 5px;
-  overflow-y: scroll;
+  /**
+  overflow-x: scroll;
+  /**/
 }
 
 @media screen and (max-width: 600px) {
-  p.scripts, .highlighter-rouge {
+  .highlighter-rouge {
     width: 80vw;
     /**
     border: 1px solid red;

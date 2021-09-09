@@ -7,6 +7,25 @@
     <title>Make Gui App Work Docker</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
+    <link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Make Gui App Work Docker</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Make Gui App Work Docker" />
+<meta name="author" content="Le KOj" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="3 SIMPLE STEPS TO MAKE A GUI APP WORK IN A DOCKER CONTAINER" />
+<meta property="og:description" content="3 SIMPLE STEPS TO MAKE A GUI APP WORK IN A DOCKER CONTAINER" />
+<link rel="canonical" href="http://0.0.0.0:4000/2021/09/06/make-gui-app-work-docker.html" />
+<meta property="og:url" content="http://0.0.0.0:4000/2021/09/06/make-gui-app-work-docker.html" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-09-06T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Make Gui App Work Docker" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Le KOj"},"description":"3 SIMPLE STEPS TO MAKE A GUI APP WORK IN A DOCKER CONTAINER","headline":"Make Gui App Work Docker","dateModified":"2021-09-06T00:00:00-05:00","datePublished":"2021-09-06T00:00:00-05:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/2021/09/06/make-gui-app-work-docker.html"},"url":"http://0.0.0.0:4000/2021/09/06/make-gui-app-work-docker.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
 </head>
 <body>
     <nav class="topnav" id="myTopnav">
@@ -29,19 +48,20 @@
 
 <h4> 3 SIMPLE STEPS TO MAKE A GUI APP WORK IN A DOCKER CONTAINER </h4>
 
-<p>Make sure x11-server is installed an up to date by running:</p>
+<p>Make sure <code class="language-plaintext highlighter-rouge">x11-server</code> is installed an up to date by running:</p>
 
-<p class="scripts"> sudo apt-get install x11-xserver-utils </p>
+<p><code class="language-plaintext highlighter-rouge">sudo apt-get install x11-xserver-utils</code></p>
 
 <p>Grant full access to the x11-server by running:</p>
 
-<p class="scripts"> xhost + </p>
+<p><code class="language-plaintext highlighter-rouge">xhost +</code></p>
 
-<p>Run the docker container with the following flags &lt;/p&gt;:</p>
+<p>Run the docker container with the following flags <code class="language-plaintext highlighter-rouge">&lt;/p&gt;</code>:</p>
 
-<p class="scripts"> -e DISPLAY=unix$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix </p>
+<p><code class="language-plaintext highlighter-rouge">-e DISPLAY=unix$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix</code></p>
 
     </main>
 <script src="/assets/js/styles.js"></script>
+
 </body>
 </html>
