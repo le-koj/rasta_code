@@ -7,8 +7,11 @@ title: Rasta Code
 <ul class="card-container">
   {% for post in site.posts %}
     <li class="card">
-      <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+      <h2><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
       {{ post.excerpt }}
     </li>
+
   {% endfor %}
 </ul>
+
+<span></span>
