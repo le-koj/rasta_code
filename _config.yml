@@ -18,5 +18,5 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
-url: "https://rasta-code.mitchkoj.com/"
-baseurl: "/rasta_code"
+url: "https://rasta-code.mitchkoj.com"
+baseurl: "/"
