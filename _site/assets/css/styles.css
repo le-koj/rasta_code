@@ -41,7 +41,15 @@ p:first-of-type { color: #989898; margin-top: 1px; margin-bottom: 20px; }
 
 h4 { color: #CCac00; }
 
-.highlighter-rouge { /** width: auto; max-width: 500px; margin-left: 1px; /**/ padding: 5px 10px 5px 10px; background: #c0c0c0; color: #262626; font-size: 1em; font-family: monospace, Courier, 'Courier New'; border-radius: 5px; /** overflow-x: scroll; /**/ }
+.code-parent { display: grid; grid-auto-flow: column; grid-template-columns: 1fr 31px; background: #c0c0c0; border-radius: 5px; padding: 5px 10px 5px 10px; }
+
+.clippy { /** display: inline; /**/ width: 15px; /**/ height: 15px; /**/ aspect-ratio: 2/2; /**/ cursor: pointer; }
+
+.code-btn { align-self: start; width: 30px; /**/ height: 25px; /**/ padding-top: 3px; }
+
+svg:hover { background: #3B3B3B; }
+
+.highlighter-rouge { /**/ width: auto; max-width: 500px; margin-left: 1px; /**/ padding: 5px 10px 5px 10px; background: #c0c0c0; color: #262626; font-size: 1em; font-family: monospace, Courier, 'Courier New'; border-radius: 5px; /** overflow-x: scroll; /**/ }
 
 @media screen and (max-width: 600px) { .highlighter-rouge { width: 80vw; /** border: 1px solid red; /**/ } }
 

@@ -7,7 +7,7 @@ author: Le KOj
 In terminal, `cd` into the root folder of the python application.
 Run the following command to start a docker container for the app.
 
-`docker container run -it –name=[CONTAINER_NAME] -v $(pwd):/home [IMAGE] bash`
+`docker container run -it –name=[CONTAINER_NAME] -v $(pwd):/home [PYTHON-IMAGE] bash`
 
 In the bash shell of the project container `cd` into the directory `home`.
 
