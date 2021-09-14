@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Open Existing Python App Docker Container</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://0.0.0.0:4000/">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" />
     <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Open Existing Python App Docker Container</title>
@@ -23,7 +25,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Open Existing Python App Docker Container" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Le KOj"},"description":"4 SIMPLE COMMAND TO OPEN AN EXISTING PYTHON APP IN A DOCKER CONTAINER","headline":"Open Existing Python App Docker Container","dateModified":"2021-09-06T00:00:00-05:00","datePublished":"2021-09-06T00:00:00-05:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/2021/09/06/open-existing-python-app-docker-container.html"},"url":"http://0.0.0.0:4000/2021/09/06/open-existing-python-app-docker-container.html","@context":"https://schema.org"}</script>
+{"headline":"Open Existing Python App Docker Container","dateModified":"2021-09-06T00:00:00-05:00","datePublished":"2021-09-06T00:00:00-05:00","description":"4 SIMPLE COMMAND TO OPEN AN EXISTING PYTHON APP IN A DOCKER CONTAINER","author":{"@type":"Person","name":"Le KOj"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/2021/09/06/open-existing-python-app-docker-container.html"},"@type":"BlogPosting","url":"http://0.0.0.0:4000/2021/09/06/open-existing-python-app-docker-container.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -51,7 +53,7 @@
 <p>In terminal, <code class="language-plaintext highlighter-rouge">cd</code> into the root folder of the python application.
 Run the following command to start a docker container for the app.</p>
 
-<p><code class="language-plaintext highlighter-rouge">docker container run -it –name=[CONTAINER_NAME] -v $(pwd):/home [IMAGE] bash</code></p>
+<p><code class="language-plaintext highlighter-rouge">docker container run -it –name=[CONTAINER_NAME] -v $(pwd):/home [PYTHON-IMAGE] bash</code></p>
 
 <p>In the bash shell of the project container <code class="language-plaintext highlighter-rouge">cd</code> into the directory <code class="language-plaintext highlighter-rouge">home</code>.</p>
 
@@ -66,7 +68,8 @@ Run the following command to start a docker container for the app.</p>
 <p>the flag [<code class="language-plaintext highlighter-rouge">-v $(pwd):/home</code>] mounts the container’s <code class="language-plaintext highlighter-rouge">home</code> directory to the app’s root folder</p>
 
     </main>
-<script src= "http://0.0.0.0:4000/"></script>
+<script src="/assets/js/styles.js"></script>
+<script src="/assets/js/script.js"></script>
 
 </body>
 </html>

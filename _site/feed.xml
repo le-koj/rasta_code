@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2021-09-10T19:16:06-05:00</updated><id>http://0.0.0.0:4000/feed.xml</id><entry><title type="html">Css Font Color</title><link href="http://0.0.0.0:4000/2021/09/06/css-font-color.html" rel="alternate" type="text/html" title="Css Font Color" /><published>2021-09-06T00:00:00-05:00</published><updated>2021-09-06T00:00:00-05:00</updated><id>http://0.0.0.0:4000/2021/09/06/css-font-color</id><content type="html" xml:base="http://0.0.0.0:4000/2021/09/06/css-font-color.html">&lt;h4 id=&quot;capitalize&quot;&gt;6 different ways to set font color.&lt;/h4&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2021-09-13T08:02:35-05:00</updated><id>http://0.0.0.0:4000/feed.xml</id><entry><title type="html">Css Font Color</title><link href="http://0.0.0.0:4000/2021/09/06/css-font-color.html" rel="alternate" type="text/html" title="Css Font Color" /><published>2021-09-06T00:00:00-05:00</published><updated>2021-09-06T00:00:00-05:00</updated><id>http://0.0.0.0:4000/2021/09/06/css-font-color</id><content type="html" xml:base="http://0.0.0.0:4000/2021/09/06/css-font-color.html">&lt;h4 id=&quot;capitalize&quot;&gt;6 different ways to set font color.&lt;/h4&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Named Color&lt;/li&gt;
@@ -169,22 +169,31 @@
 
 &lt;p&gt;&lt;a href=&quot;https://www-freecodecamp-org.cdn.ampproject.org/v/s/www.freecodecamp.org/news/css-font-color-how-to-style-text-in-html/amp/?amp_js_v=a6&amp;amp;amp_gsa=1&amp;amp;usqp=mq331AQIKAGwASCAAgM%3D#aoh=16305628764404&amp;amp;csi=0&amp;amp;referrer=https%3A%2F%2Fwww.google.com&amp;amp;amp_tf=From%20%251%24s&amp;amp;ampshare=https%3A%2F%2Fwww.freecodecamp.org%2Fnews%2Fcss-font-color-how-to-style-text-in-html%2F&quot;&gt;CSS Font Color – How to Style Text in HTML&lt;/a&gt;&lt;/p&gt;</content><author><name>Le Koj</name></author><summary type="html">6 different ways to set font color.</summary></entry><entry><title type="html">Make Gui App Work Docker</title><link href="http://0.0.0.0:4000/2021/09/06/make-gui-app-work-docker.html" rel="alternate" type="text/html" title="Make Gui App Work Docker" /><published>2021-09-06T00:00:00-05:00</published><updated>2021-09-06T00:00:00-05:00</updated><id>http://0.0.0.0:4000/2021/09/06/make-gui-app-work-docker</id><content type="html" xml:base="http://0.0.0.0:4000/2021/09/06/make-gui-app-work-docker.html">&lt;h4&gt; 3 SIMPLE STEPS TO MAKE A GUI APP WORK IN A DOCKER CONTAINER &lt;/h4&gt;
 
-&lt;p&gt;Make sure &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x11-server&lt;/code&gt; is installed an up to date by running:&lt;/p&gt;
+&lt;p&gt;Make sure &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x11-server&lt;/code&gt; is installed and up-to-date by running:&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo apt-get install x11-xserver-utils&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code id=&quot;gui-app1&quot; class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo apt-get install x11-xserver-utils&lt;/code&gt;
+&lt;button class=&quot;btn code-btn&quot; data-clipboard-target=&quot;#gui-app1&quot;&gt;
+    &lt;img class=&quot;clippy&quot; src=&quot;/assets/clippy.svg&quot; alt=&quot;copy to clipboard&quot; /&gt;
+&lt;/button&gt;&lt;/p&gt;
 
 &lt;p&gt;Grant full access to the x11-server by running:&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;xhost +&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code id=&quot;gui-app2&quot; class=&quot;language-plaintext highlighter-rouge&quot;&gt;xhost +&lt;/code&gt;
+&lt;button class=&quot;btn code-btn&quot; data-clipboard-target=&quot;#gui-app2&quot;&gt;
+    &lt;img class=&quot;clippy&quot; src=&quot;/assets/clippy.svg&quot; alt=&quot;copy to clipboard&quot; /&gt;
+&lt;/button&gt;&lt;/p&gt;
 
-&lt;p&gt;Run the docker container with the following flags &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/p&amp;gt;&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;Run the docker container with the following flags:&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-e DISPLAY=unix$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix&lt;/code&gt;&lt;/p&gt;</content><author><name>Le KOj</name></author><summary type="html">3 SIMPLE STEPS TO MAKE A GUI APP WORK IN A DOCKER CONTAINER</summary></entry><entry><title type="html">Open Existing Python App Docker Container</title><link href="http://0.0.0.0:4000/2021/09/06/open-existing-python-app-docker-container.html" rel="alternate" type="text/html" title="Open Existing Python App Docker Container" /><published>2021-09-06T00:00:00-05:00</published><updated>2021-09-06T00:00:00-05:00</updated><id>http://0.0.0.0:4000/2021/09/06/open-existing-python-app-docker-container</id><content type="html" xml:base="http://0.0.0.0:4000/2021/09/06/open-existing-python-app-docker-container.html">&lt;h4&gt;4 SIMPLE COMMAND TO OPEN AN EXISTING PYTHON APP IN A DOCKER CONTAINER&lt;/h4&gt;
+&lt;p&gt;&lt;code id=&quot;gui-app3&quot; class=&quot;language-plaintext highlighter-rouge&quot;&gt;-e DISPLAY=unix$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix&lt;/code&gt;
+&lt;button class=&quot;btn code-btn&quot; data-clipboard-target=&quot;#gui-app3&quot;&gt;
+    &lt;img class=&quot;clippy&quot; src=&quot;/assets/clippy.svg&quot; alt=&quot;copy to clipboard&quot; /&gt;
+&lt;/button&gt;&lt;/p&gt;</content><author><name>Le KOj</name></author><summary type="html">3 SIMPLE STEPS TO MAKE A GUI APP WORK IN A DOCKER CONTAINER</summary></entry><entry><title type="html">Open Existing Python App Docker Container</title><link href="http://0.0.0.0:4000/2021/09/06/open-existing-python-app-docker-container.html" rel="alternate" type="text/html" title="Open Existing Python App Docker Container" /><published>2021-09-06T00:00:00-05:00</published><updated>2021-09-06T00:00:00-05:00</updated><id>http://0.0.0.0:4000/2021/09/06/open-existing-python-app-docker-container</id><content type="html" xml:base="http://0.0.0.0:4000/2021/09/06/open-existing-python-app-docker-container.html">&lt;h4&gt;4 SIMPLE COMMAND TO OPEN AN EXISTING PYTHON APP IN A DOCKER CONTAINER&lt;/h4&gt;
 
 &lt;p&gt;In terminal, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cd&lt;/code&gt; into the root folder of the python application.
 Run the following command to start a docker container for the app.&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker container run -it –name=[CONTAINER_NAME] -v $(pwd):/home [IMAGE] bash&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker container run -it –name=[CONTAINER_NAME] -v $(pwd):/home [PYTHON-IMAGE] bash&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;In the bash shell of the project container &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cd&lt;/code&gt; into the directory &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;home&lt;/code&gt;.&lt;/p&gt;
 
