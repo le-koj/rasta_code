@@ -19,10 +19,12 @@ author: Le Koj
 + There are around 147 named colors recognized by browsers.
 + Basic Syntax:
 
-        element {  
-            color:  colorName;  
-            }
-
+```
+    element {  
+        color:  colorName;  
+    }
+```
+{: .basic-code-container}
 
 #### Hexadecimal Color (Hex Colors)
 
@@ -36,14 +38,16 @@ author: Le Koj
 
 + Basic Syntax:
 
-        element {  
-            color: #dc143c;  
-            }
+```
+    element {  
+        color: #dc143c;  
+        }
 
-        element {  
-            color: #c0c0c0;  
-            }
-
+    element {  
+           color: #c0c0c0;  
+        }
+```
+{: .basic-code-container}
 
 #### RGB Color
 
@@ -53,9 +57,12 @@ author: Le Koj
 
 + Basic Syntax:
 
-        element {  
-            color: rgb(amountOfRed, amountOfGreen, amountOfBlue);  
-            }
+```
+    element {  
+        color: rgb(amountOfRed, amountOfGreen, amountOfBlue);  
+        }
+```
+{: .basic-code-container}
 
 
 #### RGBA color
@@ -70,9 +77,12 @@ author: Le Koj
 
 + Basic Syntax:
 
-        element {  
-            color: rgb(amountOfRed, amountOfGreen, amountOfBlue, alpha);  
-            }
+```
+    element {  
+        color: rgb(amountOfRed, amountOfGreen, amountOfBlue, alpha);  
+        }
+```
+{: .basic-code-container}
 
 
 #### HSL color
@@ -92,9 +102,12 @@ author: Le Koj
 
 + Basic Syntax
 
-        element {  
-            color: hsl(colorDegree, saturationDegree, lIghtnessDegree);  
-            }
+```
+    element {  
+        color: hsl(colorDegree, saturationDegree, lightnessDegree);  
+        }
+```
+{: .basic-code-container}
 
 
 #### HSLA color
@@ -117,9 +130,12 @@ author: Le Koj
 
 + Basic Syntax:
 
-        element {  
-            color: hsl(colorDegree, saturationDegree, lIghtnessDegree, alpha);  
-            }
+```
+    element {  
+        color: hsl(colorDegree, saturationDegree, lightnessDegree, alpha);  
+        }
+```
+{: .basic-code-container}
 
 
 <p>Credits:</p>
