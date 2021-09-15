@@ -111,13 +111,56 @@ h4 {
   color: #CCac00;
 }
 
-.code-parent {
+.code-container {
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: 1fr 31px;
+  /**/
+  grid-column-gap: 15px;
+  /**/
+  
   background: #c0c0c0;
   border-radius: 5px;
   padding: 5px 10px 5px 10px;
+
+  /**/
+  width: auto;
+  /**/
+  max-width: 600px;
+  /**/
+  margin-left: 1px;
+  /**/
+  color: #262626;
+  font-size: 1em;
+  font-family: monospace, Courier, 'Courier New';
+  
+}
+
+.basic-code-container {
+    /**/
+    width: auto;
+    /**/
+    max-width: 600px;
+    /**/
+}
+
+div.highlight {
+  /**/
+  overflow: auto;
+  /**/
+}
+
+
+.code-btn {
+  align-self: start;
+  width: 30px;
+  /**/
+  height: 25px;
+  /**/
+  padding-top: 3px;
+  /**
+  margin-left: 15px;
+  /**/
 }
 
 .clippy {
@@ -133,36 +176,22 @@ h4 {
   cursor: pointer;
 }
 
-.code-btn {
-  align-self: start;
-  width: 30px;
-  /**/
-  height: 25px;
-  /**/
-  padding-top: 3px;
-
-}
 
 svg:hover {
   background: #3B3B3B;
 }
 
+
 .highlighter-rouge {
-  /**/
-  width: auto;
-  max-width: 500px;
-  margin-left: 1px;
-  /**/
+ 
   padding: 5px 10px 5px 10px;
   background: #c0c0c0;
   color: #262626;
   font-size: 1em;
   font-family: monospace, Courier, 'Courier New';
   border-radius: 5px;
-  /**
-  overflow-x: scroll;
-  /**/
-}
+
+} 
 
 @media screen and (max-width: 600px) {
   .highlighter-rouge {

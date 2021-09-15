@@ -14,7 +14,7 @@
 <title>Make Gui App Work Docker</title>
 <meta name="generator" content="Jekyll v4.2.0" />
 <meta property="og:title" content="Make Gui App Work Docker" />
-<meta name="author" content="Le KOj" />
+<meta name="author" content="Le Koj" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="3 SIMPLE STEPS TO MAKE A GUI APP WORK IN A DOCKER CONTAINER" />
 <meta property="og:description" content="3 SIMPLE STEPS TO MAKE A GUI APP WORK IN A DOCKER CONTAINER" />
@@ -25,7 +25,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Make Gui App Work Docker" />
 <script type="application/ld+json">
-{"headline":"Make Gui App Work Docker","dateModified":"2021-09-06T00:00:00-05:00","datePublished":"2021-09-06T00:00:00-05:00","description":"3 SIMPLE STEPS TO MAKE A GUI APP WORK IN A DOCKER CONTAINER","author":{"@type":"Person","name":"Le KOj"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/2021/09/06/make-gui-app-work-docker.html"},"@type":"BlogPosting","url":"http://0.0.0.0:4000/2021/09/06/make-gui-app-work-docker.html","@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Le Koj"},"description":"3 SIMPLE STEPS TO MAKE A GUI APP WORK IN A DOCKER CONTAINER","headline":"Make Gui App Work Docker","dateModified":"2021-09-06T00:00:00-05:00","datePublished":"2021-09-06T00:00:00-05:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/2021/09/06/make-gui-app-work-docker.html"},"url":"http://0.0.0.0:4000/2021/09/06/make-gui-app-work-docker.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -44,6 +44,7 @@
         <h1>Make Gui App Work Docker</h1>
 <p>
     06 Sep 2021
+    ~ Le Koj
     
     
 </p>
@@ -52,24 +53,19 @@
 
 <p>Make sure <code class="language-plaintext highlighter-rouge">x11-server</code> is installed and up-to-date by running:</p>
 
-<p><code id="gui-app1" class="language-plaintext highlighter-rouge">sudo apt-get install x11-xserver-utils</code>
-<button class="btn code-btn" data-clipboard-target="#gui-app1">
-    <img class="clippy" src="/assets/clippy.svg" alt="copy to clipboard" />
-</button></p>
+<div id="gui-app1" class="language-plaintext code-container highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install x11-xserver-utils
+</code></pre></div></div>
 
 <p>Grant full access to the x11-server by running:</p>
 
-<p><code id="gui-app2" class="language-plaintext highlighter-rouge">xhost +</code>
-<button class="btn code-btn" data-clipboard-target="#gui-app2">
-    <img class="clippy" src="/assets/clippy.svg" alt="copy to clipboard" />
-</button></p>
+<div id="gui-app2" class="language-plaintext code-container highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xhost +
+</code></pre></div></div>
 
 <p>Run the docker container with the following flags:</p>
 
-<p><code id="gui-app3" class="language-plaintext highlighter-rouge">-e DISPLAY=unix$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix</code>
-<button class="btn code-btn" data-clipboard-target="#gui-app3">
-    <img class="clippy" src="/assets/clippy.svg" alt="copy to clipboard" />
-</button></p>
+<div id="gui-app3" class="language-plaintext code-container highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-e DISPLAY=unix$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix
+</code></pre></div></div>
+
 
     </main>
 <script src="/assets/js/styles.js"></script>

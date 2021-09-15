@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Clipboard Copy Feature</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Add Clipboard Copy Feature</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Add Clipboard Copy Feature" />
+<meta name="author" content="Le Koj" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="HOW TO ADD “CLIPBOARD COPY” FEATURE TO CODE SNIPPETS" />
+<meta property="og:description" content="HOW TO ADD “CLIPBOARD COPY” FEATURE TO CODE SNIPPETS" />
+<link rel="canonical" href="http://0.0.0.0:4000/2021/09/13/add-clipboard-copy-feature.html" />
+<meta property="og:url" content="http://0.0.0.0:4000/2021/09/13/add-clipboard-copy-feature.html" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-09-13T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Add Clipboard Copy Feature" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Le Koj"},"description":"HOW TO ADD “CLIPBOARD COPY” FEATURE TO CODE SNIPPETS","headline":"Add Clipboard Copy Feature","dateModified":"2021-09-13T00:00:00-05:00","datePublished":"2021-09-13T00:00:00-05:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/2021/09/13/add-clipboard-copy-feature.html"},"url":"http://0.0.0.0:4000/2021/09/13/add-clipboard-copy-feature.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+    <nav class="topnav" id="myTopnav">
+  
+    <a href="/" >Rasta.Code</a>
+  
+    <a href="" ></a>
+  
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</nav>
+    <main>
+        <h1>Add Clipboard Copy Feature</h1>
+<p>
+    13 Sep 2021
+    ~ Le Koj
+    
+    
+</p>
+
+<h4 id="how-to-add-clipboard-copy-feature-to-code-snippets">HOW TO ADD “CLIPBOARD COPY” FEATURE TO CODE SNIPPETS</h4>
+
+<p>The clipboard copy feature is a useful functionality that provides rich user experience on your website.  It enables end-users to copy a code snippet or sample content without having to first highlight the content to copy it to their clipboard.  It is an automation of text highlighting and “ctr + v” to copy a content to their clipboard.</p>
+
+<p>An easy way to include the feature on your own site is to use the clipboard.js package link in your site’s <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code> tag, which loads it from a third party CDN provider.  This package handles all the necessary scripts, saving you time to write your own.</p>
+
+<div id="gui-app1" class="language-plaintext code-container highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"&gt;&lt;/script&gt;
+</code></pre></div></div>
+
+<p>You can also choose a different cdn provider from the list of options at github.  The github page link is:</p>
+
+<div id="gui-app2" class="language-plaintext code-container highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://github.com/zenorocha/clipboard.js/wiki/CDN-Providers
+</code></pre></div></div>
+
+<h4 id="setup">SETUP</h4>
+
+<p>After including the cdn link in your <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code> tag, you’ll need to instantiate it by passing a DOM selector, HTML element, or list of HTML elements.  Include the following in a javascript file:</p>
+
+<div id="gui-app3" class="language-plaintext code-container highlighter-rouge"><div class="highlight"><pre class="highlight"><code>new ClipboardJS('.btn');
+</code></pre></div></div>
+
+<p>This will add event listeners to all elements that matches the selector.</p>
+
+<p>Add a <code class="language-plaintext highlighter-rouge">&lt;button&gt;</code> element with a data-clipboard-target attribute.  The value of the attribute will be the value of the id attribute of the html element of the target content. The <code class="language-plaintext highlighter-rouge">&lt;button&gt;</code> element should be an inline element with the same parent as the html element of the target content.  The following code snippet should make things easy:</p>
+
+<div id="gui-app4" class="language-plaintext code-container highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;p class="parent-element"&gt;
+    &lt;!-- Target --&gt;
+    &lt;code id="target" &gt;
+        sudo apt-get install x11-xserver-utils
+    &lt;/code&gt;
+
+    &lt;!-- Trigger --&gt;
+    &lt;button class="btn" data-clipboard-target="#target"&gt;
+        &lt;img class="clippy" src="/image/clippy.svg" alt="Copy to clipboard"&gt;
+    &lt;/button&gt;
+&lt;/p&gt;
+</code></pre></div></div>
+
+<p>To get the clippy.svg source reference in the <code class="language-plaintext highlighter-rouge">&lt;img /&gt;</code> child element of the button element, create an .svg file in your image folder or static folder, and include the following code snippet:</p>
+
+<div id="gui-app5" class="language-plaintext code-container highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;svg height="1024" width="896" xmlns="http://www.w3.org/2000/svg"&gt;
+    &lt;path d="M128 768h256v64H128v-64z m320-384H128v64h320v-64z m128 192V448L384 640l192 192V704h320V576H576z m-288-64H128v64h160v-64zM128 704h160v-64H128v64z m576 64h64v128c-1 18-7 33-19 45s-27 18-45 19H64c-35 0-64-29-64-64V192c0-35 29-64 64-64h192C256 57 313 0 384 0s128 57 128 128h192c35 0 64 29 64 64v320h-64V320H64v576h640V768zM128 256h512c0-35-29-64-64-64h-64c-35 0-64-29-64-64s-29-64-64-64-64 29-64 64-29 64-64 64h-64c-35 0-64 29-64 64z" /&gt;
+&lt;/svg&gt;
+</code></pre></div></div>
+
+<p>The final step is to add some css to the <code class="language-plaintext highlighter-rouge">&lt;button&gt;</code> element to give it a nice button user experience.  How you edit the css is up to your creativity.  The following code snippet should make things easy:</p>
+
+<div id="gui-app6" class="language-plaintext code-container highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.clippy {
+    width: 15px;
+    height: 15px;
+    aspect-ratio: 2/2;
+    cursor: pointer;
+}
+
+.btn {
+    width: 30px;
+    height: 25px;
+    padding-top: 3px;
+}
+
+svg:hover {
+    background: #3B3B3B;
+}
+</code></pre></div></div>
+
+<h4 id="customization">CUSTOMIZATION</h4>
+
+<p>Alternatively, you can modify the javascript instantiation in step 1, by adding a few code scripts to provide feedback when the copy action is triggered.  This will be useful for texting the feature on the web browser. The following code snippets should make things easier:</p>
+
+<div id="gui-app7" class="language-plaintext code-container highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var clipboard = new ClipboardJS('.btn');
+
+clipboard.on('success', function(e){
+    console.info('Action:', e.action);
+    console.info('Text:', e.text);
+    console.info('Trigger:', e.trigger);
+
+    e.clearSelection();
+})
+
+clipboard.on('error', function(e){
+    console.error('Action', e.action);
+    console.error('Trigger', e.trigger);
+})
+</code></pre></div></div>
+
+<p>That should be all that is needed to add this useful feature to your webpage.  That’s all folks. One love and happy coding.</p>
+
+<p>CREDITS:</p>
+
+<p><a href="https://clipboardjs.com/">A modern approach to copy text to clipboard</a></p>
+
+    </main>
+<script src="/assets/js/styles.js"></script>
+<script src="/assets/js/script.js"></script>
+
+</body>
+</html>
