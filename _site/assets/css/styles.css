@@ -41,6 +41,12 @@ p:first-of-type { color: #989898; margin-top: 1px; margin-bottom: 20px; }
 
 h4 { color: #CCac00; }
 
+h5 { color: rgba(204, 172, 0, 0.7); }
+
+table { width: 320px; }
+
+td { border: 1px solid white; padding: 5px; }
+
 .code-container { display: grid; grid-auto-flow: column; grid-template-columns: 1fr 31px; /**/ grid-column-gap: 15px; /**/ background: #c0c0c0; border-radius: 5px; padding: 5px 10px 5px 10px; /**/ width: auto; /**/ max-width: 600px; /**/ margin-left: 1px; /**/ color: #262626; font-size: 1em; font-family: monospace, Courier, 'Courier New'; }
 
 .basic-code-container { /**/ width: auto; /**/ max-width: 600px; /**/ }
