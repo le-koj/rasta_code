@@ -13,8 +13,7 @@ clipboard.on('error', function(e){
     console.error('Trigger', e.trigger);
 })
 
-/* select all elements with the class */
-var elements = $("div.code-container");
+
 /* set button variable */
 var btn_elements = '<button class="btn code-btn" data-clipboard-target="#gui-app6"><img class="clippy" src="/assets/clippy.svg" alt="copy to clipboard"></button>';
 
@@ -25,6 +24,3 @@ $("div.code-container").each(function(){
     $(this).append(cur_btn);
 });
 
-/*
-$(".code-btn").parent().addClass("code-parent");
-*/

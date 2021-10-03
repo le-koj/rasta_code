@@ -1,4 +1,141 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2021-09-15T14:56:29-05:00</updated><id>http://0.0.0.0:4000/feed.xml</id><entry><title type="html">Add Clipboard Copy Feature</title><link href="http://0.0.0.0:4000/2021/09/13/add-clipboard-copy-feature.html" rel="alternate" type="text/html" title="Add Clipboard Copy Feature" /><published>2021-09-13T00:00:00-05:00</published><updated>2021-09-13T00:00:00-05:00</updated><id>http://0.0.0.0:4000/2021/09/13/add-clipboard-copy-feature</id><content type="html" xml:base="http://0.0.0.0:4000/2021/09/13/add-clipboard-copy-feature.html">&lt;h4 id=&quot;how-to-add-clipboard-copy-feature-to-code-snippets&quot;&gt;HOW TO ADD “CLIPBOARD COPY” FEATURE TO CODE SNIPPETS&lt;/h4&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2021-10-02T23:30:57-05:00</updated><id>http://0.0.0.0:4000/feed.xml</id><entry><title type="html">Encrypt Your Data</title><link href="http://0.0.0.0:4000/2021/10/02/encrypt-your-data.html" rel="alternate" type="text/html" title="Encrypt Your Data" /><published>2021-10-02T00:00:00-05:00</published><updated>2021-10-02T00:00:00-05:00</updated><id>http://0.0.0.0:4000/2021/10/02/encrypt-your-data</id><content type="html" xml:base="http://0.0.0.0:4000/2021/10/02/encrypt-your-data.html">&lt;h4 id=&quot;simple-steps-to-encrypt-a-file&quot;&gt;SIMPLE STEPS TO ENCRYPT A FILE&lt;/h4&gt;
+
+&lt;p&gt;The following steps will show you how to encrypt and decrypt your data using AES Encryption technique and the openssl tool in command line.&lt;/p&gt;
+
+&lt;h4 id=&quot;basics&quot;&gt;BASICS&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Advanced_Encryption_Standard&quot;&gt;AES ( Advanced Encryption Standard or Rijndael )&lt;/a&gt; is a specification for encrypting electronic data established by the U.S National Institute of Standards and Technology.  It is a &lt;a href=&quot;https://en.wikipedia.org/wiki/Symmetric-key_algorithm&quot;&gt;symmetric encryption&lt;/a&gt; based of the &lt;a href=&quot;https://en.wikipedia.org/wiki/Block_cipher&quot;&gt;block encryption algorithm&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;AES supports five &lt;a href=&quot;https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation&quot;&gt;modes&lt;/a&gt; of encryption:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ECB mode&lt;/td&gt;
+      &lt;td&gt;Electronic Code Book mode&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;CBC mode&lt;/td&gt;
+      &lt;td&gt;Cipher Block Chaining mode&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;CFB mode&lt;/td&gt;
+      &lt;td&gt;Cipher Feedback mode&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;OFB mode&lt;/td&gt;
+      &lt;td&gt;Output Feedback mode&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;CTR mode&lt;/td&gt;
+      &lt;td&gt;Counter mode&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;We’ll be using the simplest of the five encryption modes, ECB.  With ECB, the message is divided into blocks, and each block is encrypted separately.&lt;/p&gt;
+
+&lt;h4 id=&quot;openssl-installation&quot;&gt;OPENSSL INSTALLATION&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.openssl.org/&quot;&gt;OpenSSL&lt;/a&gt; is a robust, commercial-grade, and full-featured toolkit for the Transport Layer Security (TLS) and Secure Sockets Layer (SSL) protocols. It is also a general-purpose cryptography library. 
+OpenSSL supports many different cryptographic operations, such as symmetric key encryption, public/private key pair generation, public-key encryption, hash functions, digital signatures, etc.&lt;/p&gt;
+
+&lt;h5 id=&quot;linux&quot;&gt;Linux&lt;/h5&gt;
+
+&lt;p&gt;OpenSSL comes pre-installed on most linux distributions. To check if OpenSSL is installed, run the following command:&lt;/p&gt;
+
+&lt;div id=&quot;gui-app1&quot; class=&quot;language-plaintext code-container highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;which openssl
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If you get zero output, you can install openssl as follows.&lt;/p&gt;
+
+&lt;p&gt;First, update and upgrade the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;apt&lt;/code&gt; package manager:&lt;/p&gt;
+
+&lt;div id=&quot;gui-app2&quot; class=&quot;language-plaintext code-container highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get update; sudo apt-get upgrade
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;second, install openssl:&lt;/p&gt;
+
+&lt;div id=&quot;gui-app3&quot; class=&quot;language-plaintext code-container highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install openssl
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;windows&quot;&gt;Windows&lt;/h5&gt;
+
+&lt;p&gt;you can install openssl on windows by following the instructions in the article provided:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/swlh/installing-openssl-on-windows-10-and-updating-path-80992e26f6a1&quot;&gt;Installing OpenSSL on Windows 10 and updating PATH&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;mac&quot;&gt;Mac&lt;/h5&gt;
+
+&lt;p&gt;to install openssl on Mac OS, you can simply run the folowing command in the command line:&lt;/p&gt;
+
+&lt;div id=&quot;gui-app5&quot; class=&quot;language-plaintext code-container highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew install openssl
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;encrypting-your-datafile&quot;&gt;ENCRYPTING YOUR DATA/FILE&lt;/h4&gt;
+
+&lt;p&gt;To begin encrypting your data, run the following command:&lt;/p&gt;
+
+&lt;div id=&quot;gui-app6&quot; class=&quot;language-plaintext code-container highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;openssl enc -aes-256-cbc -a -A -md sha512 -pbkdf2 -iter 250000 -salt -in InputFilePath -out OutputFilePath
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;After the command is executed, you’ll be prompted to set a passphrase.  The passphrase is required to decrypt the data and it is virtually impossible to decrypt the file without the passphrase, even with brute force.&lt;/p&gt;
+
+&lt;h5 id=&quot;command-breakdown&quot;&gt;Command Breakdown:&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;enc&lt;/code&gt; is used to specify the cipher name&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aes-256-cbc&lt;/code&gt; is the cipher name along with the mode of operation which is CBC (Cipher Block Chaining mode)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt; is used for Base64 encode/decode.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;A&lt;/code&gt; is used with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-a&lt;/code&gt; to specify base64 buffer as a single line.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;md&lt;/code&gt; sha512 specifies which digest to use for the generation of the key from the passphrase. The default value from version 1.1.0 is SHA256. Before version 1.1.0 MD5 was the default digest.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pbkdf2&lt;/code&gt; specifies to use PBKDF2 (Password-Based Key Derivation Function 2) algorithm&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;iter 250000&lt;/code&gt; is overriding the default count of iterations for the password. High values increase the time required to brute-force the resulting file. This option enables the use of the PBKDF2 algorithm to derive the key.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;salt&lt;/code&gt; Use salt in Key Derivation Function (KDF). This is the default behaviour and thus this option is not required.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;decrypting-your-datafile&quot;&gt;DECRYPTING YOUR DATA/FILE&lt;/h4&gt;
+
+&lt;p&gt;To decrypt your data/file, use the same commands for encryption, but with a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-d&lt;/code&gt; option in it, as follows:&lt;/p&gt;
+
+&lt;div id=&quot;gui-app7&quot; class=&quot;language-plaintext code-container highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;openssl enc -aes-256-cbc -a -A -d -md sha512 -pbkdf2 -iter 250000 -salt -in InputFilePath -out OutputFilePath
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;note&quot;&gt;NOTE:&lt;/h5&gt;
+
+&lt;p&gt;The above commands to encrypt and decrypt only works on single files.  To encrypt/decrypt multiple files, you’ll need to first convert it into a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tar&lt;/code&gt; file, then run the same commands on the tar file.&lt;/p&gt;
+
+&lt;p&gt;You should now have the knowledge to secure your data/file for your eyes only.&lt;/p&gt;
+
+&lt;p&gt;One Love, and be secured in the matrix.&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;&lt;/span&gt;
+CREDITS:
+&lt;a href=&quot;https://dev.to/blastoise/aes-encryption-in-linux-585f&quot;&gt;AES Encryption in Linux&lt;/a&gt;&lt;/p&gt;</content><author><name>Le Koj</name></author><summary type="html">SIMPLE STEPS TO ENCRYPT A FILE</summary></entry><entry><title type="html">Add Clipboard Copy Feature</title><link href="http://0.0.0.0:4000/2021/09/13/add-clipboard-copy-feature.html" rel="alternate" type="text/html" title="Add Clipboard Copy Feature" /><published>2021-09-13T00:00:00-05:00</published><updated>2021-09-13T00:00:00-05:00</updated><id>http://0.0.0.0:4000/2021/09/13/add-clipboard-copy-feature</id><content type="html" xml:base="http://0.0.0.0:4000/2021/09/13/add-clipboard-copy-feature.html">&lt;h4 id=&quot;how-to-add-clipboard-copy-feature-to-code-snippets&quot;&gt;HOW TO ADD “CLIPBOARD COPY” FEATURE TO CODE SNIPPETS&lt;/h4&gt;
 
 &lt;p&gt;The clipboard copy feature is a useful functionality that provides rich user experience on your website.  It enables end-users to copy a code snippet or sample content without having to first highlight the content to copy it to their clipboard.  It is an automation of text highlighting and “ctr + v” to copy a content to their clipboard.&lt;/p&gt;
 
@@ -87,22 +224,7 @@ clipboard.on('error', function(e){
 
 &lt;p&gt;CREDITS:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://clipboardjs.com/&quot;&gt;A modern approach to copy text to clipboard&lt;/a&gt;&lt;/p&gt;</content><author><name>Le Koj</name></author><summary type="html">HOW TO ADD “CLIPBOARD COPY” FEATURE TO CODE SNIPPETS</summary></entry><entry><title type="html">Make Gui App Work Docker</title><link href="http://0.0.0.0:4000/2021/09/06/make-gui-app-work-docker.html" rel="alternate" type="text/html" title="Make Gui App Work Docker" /><published>2021-09-06T00:00:00-05:00</published><updated>2021-09-06T00:00:00-05:00</updated><id>http://0.0.0.0:4000/2021/09/06/make-gui-app-work-docker</id><content type="html" xml:base="http://0.0.0.0:4000/2021/09/06/make-gui-app-work-docker.html">&lt;h4&gt; 3 SIMPLE STEPS TO MAKE A GUI APP WORK IN A DOCKER CONTAINER &lt;/h4&gt;
-
-&lt;p&gt;Make sure &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x11-server&lt;/code&gt; is installed and up-to-date by running:&lt;/p&gt;
-
-&lt;div id=&quot;gui-app1&quot; class=&quot;language-plaintext code-container highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install x11-xserver-utils
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Grant full access to the x11-server by running:&lt;/p&gt;
-
-&lt;div id=&quot;gui-app2&quot; class=&quot;language-plaintext code-container highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;xhost +
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Run the docker container with the following flags:&lt;/p&gt;
-
-&lt;div id=&quot;gui-app3&quot; class=&quot;language-plaintext code-container highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-e DISPLAY=unix$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Le Koj</name></author><summary type="html">3 SIMPLE STEPS TO MAKE A GUI APP WORK IN A DOCKER CONTAINER</summary></entry><entry><title type="html">Open Existing Python App Docker Container</title><link href="http://0.0.0.0:4000/2021/09/06/open-existing-python-app-docker-container.html" rel="alternate" type="text/html" title="Open Existing Python App Docker Container" /><published>2021-09-06T00:00:00-05:00</published><updated>2021-09-06T00:00:00-05:00</updated><id>http://0.0.0.0:4000/2021/09/06/open-existing-python-app-docker-container</id><content type="html" xml:base="http://0.0.0.0:4000/2021/09/06/open-existing-python-app-docker-container.html">&lt;h4&gt;4 SIMPLE COMMAND TO OPEN AN EXISTING PYTHON APP IN A DOCKER CONTAINER&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;https://clipboardjs.com/&quot;&gt;A modern approach to copy text to clipboard&lt;/a&gt;&lt;/p&gt;</content><author><name>Le Koj</name></author><summary type="html">HOW TO ADD “CLIPBOARD COPY” FEATURE TO CODE SNIPPETS</summary></entry><entry><title type="html">Open Existing Python App Docker Container</title><link href="http://0.0.0.0:4000/2021/09/06/open-existing-python-app-docker-container.html" rel="alternate" type="text/html" title="Open Existing Python App Docker Container" /><published>2021-09-06T00:00:00-05:00</published><updated>2021-09-06T00:00:00-05:00</updated><id>http://0.0.0.0:4000/2021/09/06/open-existing-python-app-docker-container</id><content type="html" xml:base="http://0.0.0.0:4000/2021/09/06/open-existing-python-app-docker-container.html">&lt;h4&gt;4 SIMPLE COMMAND TO OPEN AN EXISTING PYTHON APP IN A DOCKER CONTAINER&lt;/h4&gt;
 
 &lt;p&gt;In terminal, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cd&lt;/code&gt; into the root folder of the python application.
 Run the following command to start a docker container for the app.&lt;/p&gt;
@@ -122,7 +244,22 @@ Run the following command to start a docker container for the app.&lt;/p&gt;
 
 &lt;p&gt;NOTE: &lt;/p&gt;
 
-&lt;p&gt;the flag [&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-v $(pwd):/home&lt;/code&gt;] mounts the container’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;home&lt;/code&gt; directory to the app’s root folder&lt;/p&gt;</content><author><name>Le Koj</name></author><summary type="html">4 SIMPLE COMMAND TO OPEN AN EXISTING PYTHON APP IN A DOCKER CONTAINER</summary></entry><entry><title type="html">Css Font Color</title><link href="http://0.0.0.0:4000/2021/09/06/css-font-color.html" rel="alternate" type="text/html" title="Css Font Color" /><published>2021-09-06T00:00:00-05:00</published><updated>2021-09-06T00:00:00-05:00</updated><id>http://0.0.0.0:4000/2021/09/06/css-font-color</id><content type="html" xml:base="http://0.0.0.0:4000/2021/09/06/css-font-color.html">&lt;h4 id=&quot;capitalize&quot;&gt;6 different ways to set font color.&lt;/h4&gt;
+&lt;p&gt;the flag [&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-v $(pwd):/home&lt;/code&gt;] mounts the container’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;home&lt;/code&gt; directory to the app’s root folder&lt;/p&gt;</content><author><name>Le Koj</name></author><summary type="html">4 SIMPLE COMMAND TO OPEN AN EXISTING PYTHON APP IN A DOCKER CONTAINER</summary></entry><entry><title type="html">Make Gui App Work Docker</title><link href="http://0.0.0.0:4000/2021/09/06/make-gui-app-work-docker.html" rel="alternate" type="text/html" title="Make Gui App Work Docker" /><published>2021-09-06T00:00:00-05:00</published><updated>2021-09-06T00:00:00-05:00</updated><id>http://0.0.0.0:4000/2021/09/06/make-gui-app-work-docker</id><content type="html" xml:base="http://0.0.0.0:4000/2021/09/06/make-gui-app-work-docker.html">&lt;h4&gt; 3 SIMPLE STEPS TO MAKE A GUI APP WORK IN A DOCKER CONTAINER &lt;/h4&gt;
+
+&lt;p&gt;Make sure &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x11-server&lt;/code&gt; is installed and up-to-date by running:&lt;/p&gt;
+
+&lt;div id=&quot;gui-app1&quot; class=&quot;language-plaintext code-container highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install x11-xserver-utils
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Grant full access to the x11-server by running:&lt;/p&gt;
+
+&lt;div id=&quot;gui-app2&quot; class=&quot;language-plaintext code-container highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;xhost +
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Run the docker container with the following flags:&lt;/p&gt;
+
+&lt;div id=&quot;gui-app3&quot; class=&quot;language-plaintext code-container highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-e DISPLAY=unix$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Le Koj</name></author><summary type="html">3 SIMPLE STEPS TO MAKE A GUI APP WORK IN A DOCKER CONTAINER</summary></entry><entry><title type="html">Css Font Color</title><link href="http://0.0.0.0:4000/2021/09/06/css-font-color.html" rel="alternate" type="text/html" title="Css Font Color" /><published>2021-09-06T00:00:00-05:00</published><updated>2021-09-06T00:00:00-05:00</updated><id>http://0.0.0.0:4000/2021/09/06/css-font-color</id><content type="html" xml:base="http://0.0.0.0:4000/2021/09/06/css-font-color.html">&lt;h4 id=&quot;capitalize&quot;&gt;6 different ways to set font color.&lt;/h4&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Named Color&lt;/li&gt;

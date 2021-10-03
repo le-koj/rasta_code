@@ -111,6 +111,19 @@ h4 {
   color: #CCac00;
 }
 
+h5 {
+  color: rgba($color: #CCaC00, $alpha: 0.7);
+}
+
+table {
+  width: 320px;
+}
+
+td {
+  border: 1px solid white;
+  padding: 5px;
+}
+
 .code-container {
   display: grid;
   grid-auto-flow: column;
