@@ -11,6 +11,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     {% feed_meta %}
     {% seo %}
+    {% if jekyll.environment == "production" %}
+     {% include analytics.html %}
+    {% endif %}
 </head>
 <body>
     {% include navigation.html %}
@@ -19,8 +22,5 @@
     </main>
 <script src="/assets/js/styles.js"></script>
 <script src="/assets/js/script.js"></script>
-{% if jekyll.environment == "production" %}
-  <script src="/my-analytics-script.js"></script>
-{% endif %}
 </body>
 </html>
