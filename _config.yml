@@ -21,3 +21,5 @@ plugins:
 url: "https://rasta-code.mitchkoj.com"
 baseurl: "/"
 
+google_analytics: 'G-6CDS1JJWJ9'
+
