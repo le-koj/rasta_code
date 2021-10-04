@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encrypt Your Data</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link type="application/atom+xml" rel="alternate" href="https://rasta-code.mitchkoj.com/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Encrypt Your Data</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Encrypt Your Data" />
+<meta name="author" content="Le Koj" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="SIMPLE STEPS TO ENCRYPT A FILE" />
+<meta property="og:description" content="SIMPLE STEPS TO ENCRYPT A FILE" />
+<link rel="canonical" href="https://rasta-code.mitchkoj.com/2021/10/02/encrypt-your-data.html" />
+<meta property="og:url" content="https://rasta-code.mitchkoj.com/2021/10/02/encrypt-your-data.html" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-10-02T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Encrypt Your Data" />
+<script type="application/ld+json">
+{"description":"SIMPLE STEPS TO ENCRYPT A FILE","url":"https://rasta-code.mitchkoj.com/2021/10/02/encrypt-your-data.html","@type":"BlogPosting","headline":"Encrypt Your Data","dateModified":"2021-10-02T00:00:00+00:00","datePublished":"2021-10-02T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://rasta-code.mitchkoj.com/2021/10/02/encrypt-your-data.html"},"author":{"@type":"Person","name":"Le Koj"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    
+     <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6CDS1JJWJ9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6CDS1JJWJ9');
+</script>
+    
+</head>
+<body>
+    <nav class="topnav" id="myTopnav">
+  
+    <a href="/" >Rasta.Code</a>
+  
+    <a href="" ></a>
+  
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</nav>
+    <main>
+        <h1>Encrypt Your Data</h1>
+<p>
+    02 Oct 2021
+    ~ Le Koj
+    
+    
+</p>
+
+<h4 id="simple-steps-to-encrypt-a-file">SIMPLE STEPS TO ENCRYPT A FILE</h4>
+
+<p>The following steps will show you how to encrypt and decrypt your data using AES Encryption technique and the openssl tool in command line.</p>
+
+<h4 id="basics">BASICS</h4>
+
+<p><a href="https://en.wikipedia.org/wiki/Advanced_Encryption_Standard">AES ( Advanced Encryption Standard or Rijndael )</a> is a specification for encrypting electronic data established by the U.S National Institute of Standards and Technology.  It is a <a href="https://en.wikipedia.org/wiki/Symmetric-key_algorithm">symmetric encryption</a> based of the <a href="https://en.wikipedia.org/wiki/Block_cipher">block encryption algorithm</a>.</p>
+
+<p>AES supports five <a href="https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation">modes</a> of encryption:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>ECB mode</td>
+      <td>Electronic Code Book mode</td>
+    </tr>
+    <tr>
+      <td>CBC mode</td>
+      <td>Cipher Block Chaining mode</td>
+    </tr>
+    <tr>
+      <td>CFB mode</td>
+      <td>Cipher Feedback mode</td>
+    </tr>
+    <tr>
+      <td>OFB mode</td>
+      <td>Output Feedback mode</td>
+    </tr>
+    <tr>
+      <td>CTR mode</td>
+      <td>Counter mode</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>We’ll be using the simplest of the five encryption modes, ECB.  With ECB, the message is divided into blocks, and each block is encrypted separately.</p>
+
+<h4 id="openssl-installation">OPENSSL INSTALLATION</h4>
+
+<p><a href="https://www.openssl.org/">OpenSSL</a> is a robust, commercial-grade, and full-featured toolkit for the Transport Layer Security (TLS) and Secure Sockets Layer (SSL) protocols. It is also a general-purpose cryptography library. 
+OpenSSL supports many different cryptographic operations, such as symmetric key encryption, public/private key pair generation, public-key encryption, hash functions, digital signatures, etc.</p>
+
+<h5 id="linux">Linux</h5>
+
+<p>OpenSSL comes pre-installed on most linux distributions. To check if OpenSSL is installed, run the following command:</p>
+
+<div id="gui-app1" class="language-plaintext code-container highlighter-rouge"><div class="highlight"><pre class="highlight"><code>which openssl
+</code></pre></div></div>
+
+<p>If you get zero output, you can install openssl as follows.</p>
+
+<p>First, update and upgrade the <code class="language-plaintext highlighter-rouge">apt</code> package manager:</p>
+
+<div id="gui-app2" class="language-plaintext code-container highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get update; sudo apt-get upgrade
+</code></pre></div></div>
+
+<p>second, install openssl:</p>
+
+<div id="gui-app3" class="language-plaintext code-container highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install openssl
+</code></pre></div></div>
+
+<p><span></span></p>
+
+<h5 id="windows">Windows</h5>
+
+<p>you can install openssl on windows by following the instructions in the article provided:</p>
+
+<p><a href="https://medium.com/swlh/installing-openssl-on-windows-10-and-updating-path-80992e26f6a1">Installing OpenSSL on Windows 10 and updating PATH</a></p>
+
+<p><span></span></p>
+
+<h5 id="mac">Mac</h5>
+
+<p>to install openssl on Mac OS, you can simply run the folowing command in the command line:</p>
+
+<div id="gui-app5" class="language-plaintext code-container highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install openssl
+</code></pre></div></div>
+
+<p><span></span></p>
+
+<h4 id="encrypting-your-datafile">ENCRYPTING YOUR DATA/FILE</h4>
+
+<p>To begin encrypting your data, run the following command:</p>
+
+<div id="gui-app6" class="language-plaintext code-container highlighter-rouge"><div class="highlight"><pre class="highlight"><code>openssl enc -aes-256-cbc -a -A -md sha512 -pbkdf2 -iter 250000 -salt -in InputFilePath -out OutputFilePath
+</code></pre></div></div>
+
+<p>After the command is executed, you’ll be prompted to set a passphrase.  The passphrase is required to decrypt the data and it is virtually impossible to decrypt the file without the passphrase, even with brute force.</p>
+
+<h5 id="command-breakdown">Command Breakdown:</h5>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">enc</code> is used to specify the cipher name</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">aes-256-cbc</code> is the cipher name along with the mode of operation which is CBC (Cipher Block Chaining mode)</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">a</code> is used for Base64 encode/decode.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">A</code> is used with <code class="language-plaintext highlighter-rouge">-a</code> to specify base64 buffer as a single line.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">md</code> sha512 specifies which digest to use for the generation of the key from the passphrase. The default value from version 1.1.0 is SHA256. Before version 1.1.0 MD5 was the default digest.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">pbkdf2</code> specifies to use PBKDF2 (Password-Based Key Derivation Function 2) algorithm</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">iter 250000</code> is overriding the default count of iterations for the password. High values increase the time required to brute-force the resulting file. This option enables the use of the PBKDF2 algorithm to derive the key.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">salt</code> Use salt in Key Derivation Function (KDF). This is the default behaviour and thus this option is not required.</p>
+  </li>
+</ul>
+
+<h4 id="decrypting-your-datafile">DECRYPTING YOUR DATA/FILE</h4>
+
+<p>To decrypt your data/file, use the same commands for encryption, but with a <code class="language-plaintext highlighter-rouge">-d</code> option in it, as follows:</p>
+
+<div id="gui-app7" class="language-plaintext code-container highlighter-rouge"><div class="highlight"><pre class="highlight"><code>openssl enc -aes-256-cbc -a -A -d -md sha512 -pbkdf2 -iter 250000 -salt -in InputFilePath -out OutputFilePath
+</code></pre></div></div>
+
+<p><span></span></p>
+
+<h5 id="note">NOTE:</h5>
+
+<p>The above commands to encrypt and decrypt only works on single files.  To encrypt/decrypt multiple files, you’ll need to first convert it into a <code class="language-plaintext highlighter-rouge">tar</code> file, then run the same commands on the tar file.</p>
+
+<p>You should now have the knowledge to secure your data/file for your eyes only.</p>
+
+<p>One Love, and be secured in the matrix.</p>
+
+<p><span></span>
+CREDITS:
+<a href="https://dev.to/blastoise/aes-encryption-in-linux-585f">AES Encryption in Linux</a></p>
+
+    </main>
+<script src="/assets/js/styles.js"></script>
+<script src="/assets/js/script.js"></script>
+</body>
+</html>
